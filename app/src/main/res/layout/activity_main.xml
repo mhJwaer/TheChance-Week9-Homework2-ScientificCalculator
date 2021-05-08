@@ -17,19 +17,21 @@
         android:layout_marginBottom="16dp"
         android:paddingStart="32dp"
         android:paddingEnd="32dp"
+        android:text="@string/zero"
+        android:maxLines="1"
         android:textAlignment="textEnd"
         android:textColor="@color/white"
         android:textSize="65sp"
         app:layout_constraintBottom_toTopOf="@+id/btn_percent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="0" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
     <Button
         android:id="@+id/btn_ac"
         style="@style/oval_btn"
         android:background="@drawable/gray_btn"
+        android:onClick="acClick"
         android:text="@string/ac"
         app:layout_constraintBottom_toBottomOf="@+id/btn_div"
         app:layout_constraintEnd_toStartOf="@+id/btn_neg_pos"
@@ -38,6 +40,7 @@
         app:layout_constraintTop_toTopOf="@+id/btn_div" />
 
     <Button
+        android:onClick="negPos"
         android:id="@+id/btn_neg_pos"
         style="@style/oval_btn"
         android:background="@drawable/gray_btn"
@@ -50,6 +53,7 @@
 
     <Button
         android:id="@+id/btn_percent"
+        android:onClick="percentBtnClick"
         style="@style/oval_btn"
         android:background="@drawable/gray_btn"
         android:text="@string/percent"
@@ -64,6 +68,7 @@
         style="@style/oval_btn"
         android:layout_marginBottom="16dp"
         android:background="@drawable/operation_btn"
+        android:onClick="opBtnClick"
         android:text="@string/div"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/btn_multiply"
@@ -77,6 +82,7 @@
         style="@style/oval_btn"
         android:layout_marginBottom="16dp"
         android:background="@drawable/operation_btn"
+        android:onClick="opBtnClick"
         android:text="@string/plus"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/btn_equal"
@@ -88,6 +94,7 @@
         style="@style/oval_btn"
         android:layout_marginBottom="16dp"
         android:background="@drawable/operation_btn"
+        android:onClick="opBtnClick"
         android:text="@string/x"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/btn_minus"
@@ -100,6 +107,7 @@
         style="@style/oval_btn"
         android:layout_marginBottom="16dp"
         android:background="@drawable/operation_btn"
+        android:onClick="opBtnClick"
         android:text="@string/minus"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/btn_plus"
@@ -111,6 +119,7 @@
         style="@style/oval_btn"
         android:layout_marginBottom="16dp"
         android:background="@drawable/dark_gray_btn"
+        android:onClick="digitClick"
         android:text="@string/six"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/btn_three"
@@ -122,6 +131,7 @@
         style="@style/oval_btn"
         android:layout_marginBottom="16dp"
         android:background="@drawable/dark_gray_btn"
+        android:onClick="digitClick"
         android:text="@string/three"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/btn_dot"
@@ -131,6 +141,7 @@
     <Button
         android:id="@+id/btn_dot"
         style="@style/oval_btn"
+        android:onClick="dotClick"
         android:layout_marginBottom="16dp"
         android:background="@drawable/dark_gray_btn"
         android:text="@string/dot"
@@ -144,6 +155,7 @@
         style="@style/oval_btn"
         android:layout_marginBottom="16dp"
         android:background="@drawable/dark_gray_btn"
+        android:onClick="digitClick"
         android:text="@string/nine"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/btn_six"
@@ -155,6 +167,7 @@
         style="@style/oval_btn"
         android:layout_marginBottom="16dp"
         android:background="@drawable/dark_gray_btn"
+        android:onClick="digitClick"
         android:text="@string/eight"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/btn_five"
@@ -166,6 +179,7 @@
         style="@style/oval_btn"
         android:layout_marginBottom="16dp"
         android:background="@drawable/dark_gray_btn"
+        android:onClick="digitClick"
         android:text="@string/four"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/btn_one"
@@ -177,6 +191,7 @@
         style="@style/oval_btn"
         android:layout_marginBottom="16dp"
         android:background="@drawable/dark_gray_btn"
+        android:onClick="digitClick"
         android:text="@string/one"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/btn_zero"
@@ -188,6 +203,7 @@
         style="@style/oval_btn"
         android:layout_marginBottom="16dp"
         android:background="@drawable/dark_gray_btn"
+        android:onClick="digitClick"
         android:text="@string/tow"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/btn_zero"
@@ -199,6 +215,7 @@
         style="@style/oval_btn"
         android:layout_marginBottom="16dp"
         android:background="@drawable/dark_gray_btn"
+        android:onClick="digitClick"
         android:text="@string/five"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/btn_tow"
@@ -210,6 +227,7 @@
         style="@style/oval_btn"
         android:layout_marginBottom="16dp"
         android:background="@drawable/dark_gray_btn"
+        android:onClick="digitClick"
         android:text="@string/seven"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/btn_four"
@@ -217,6 +235,7 @@
         app:layout_constraintStart_toStartOf="@+id/btn_ac" />
 
     <Button
+        android:onClick="equalBtnClick"
         android:id="@+id/btn_equal"
         style="@style/oval_btn"
         android:layout_marginBottom="16dp"
@@ -229,16 +248,17 @@
 
     <Button
         android:id="@+id/btn_zero"
-        android:layout_height="56dp"
         android:layout_width="0dp"
+        android:layout_height="56dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/zero_btn"
-        android:text="@string/zero"
-        android:textSize="24sp"
-        android:textAlignment="textStart"
+        android:onClick="digitClick"
         android:paddingStart="24dp"
         android:paddingEnd="24dp"
+        android:text="@string/zero"
+        android:textAlignment="textStart"
         android:textColor="@color/white"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btn_neg_pos"
         app:layout_constraintStart_toStartOf="@+id/btn_ac" />
