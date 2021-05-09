@@ -19,4 +19,32 @@
     <string name="seven">7</string>
     <string name="equals">=</string>
     <string name="zero">0</string>
+    <string name="sqrtRoot">√x</string>
+    <string name="cubeRoot">∛x</string>
+    <string name="nthRoot">y√x</string>
+    <string name="tenBaseX">10^x</string>
+    <string name="log10">log10</string>
+    <string name="e">e</string>
+    <string name="ex">e^x</string>
+    <string name="eValue">2.718281828459045</string>
+    <string name="ln">ln</string>
+    <string name="pie">3.141592653589793</string>
+    <string name="pieSym">π</string>
+    <string name="pwr2">x^2</string>
+    <string name="x_3">x^3</string>
+    <string name="pwrY">x^y</string>
+    <string name="ee">ee</string>
+    <string name="rand">rand</string>
+    <string name="tan">tan</string>
+    <string name="cos">cos</string>
+    <string name="sin">sin</string>
+    <string name="tanh">tanh</string>
+    <string name="cosh">cosh</string>
+    <string name="sinh">sinh</string>
+    <string name="factorialX">x!</string>
+    <string name="oneOverX">1/x</string>
+    <string name="towPowerX">2^x</string>
+    <string name="yPowerX">y^x</string>
+    <string name="log2">log2</string>
+
 </resources>
